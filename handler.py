@@ -56,7 +56,7 @@ def receive(event, context):
         if phrase in message['text'].lower():
             kick_user(message['group_id'], message['user_id'], message['token'])
             delete_message(message['group_id'], message['id'], message['token'])
-            send('Kicked ' + message['name'] + ' due to apparent spam post.', bot_id)
+            # send('Kicked ' + message['name'] + ' due to apparent spam post.', bot_id)
             break
 
     return {
